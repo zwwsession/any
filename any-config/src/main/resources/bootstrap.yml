@@ -26,8 +26,8 @@ spring:
         bootstrap: true
         git:
           uri: https://gitee.com/zwwtnt/any-config.git
-          username: xxxx
-          password: xxxx
+          username: zwwtnt@yeah.net
+          password: 1.session
           search-paths: /**
           basedir: ./tmp
   boot:

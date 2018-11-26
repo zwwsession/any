@@ -42,7 +42,7 @@ public class AuthenticationController {
     private ConsumerTokenServices consumerTokenServices;
 
     /**
-     * 认证页面
+     * 认证页面 url
      * @return ModelAndView
      */
     @GetMapping("/require")

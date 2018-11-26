@@ -71,11 +71,21 @@ public class AnyAuthorizationConfig extends AuthorizationServerConfigurerAdapter
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;
 
+    /**
+     * 令牌从数据库配置
+     * @param clients
+     * @throws Exception
+     */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         JdbcClientDetailsService clientDetailsService = new JdbcClientDetailsService(dataSource);
         clientDetailsService.setSelectClientDetailsSql(SecurityConstants.DEFAULT_SELECT_STATEMENT);
         clientDetailsService.setFindClientDetailsSql(SecurityConstants.DEFAULT_FIND_STATEMENT);
+        String app = passwordEncoder().encode("app");
+        System.out.print(app+"|||");
+
+        System.out.print(passwordEncoder().encode("pig"));
+
         clients.withClientDetails(clientDetailsService);
     }
 
@@ -102,6 +112,10 @@ public class AnyAuthorizationConfig extends AuthorizationServerConfigurerAdapter
                 .checkTokenAccess("permitAll()");
     }
 
+    /**
+     * 这里设置密码加密方式
+     * @return
+     */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

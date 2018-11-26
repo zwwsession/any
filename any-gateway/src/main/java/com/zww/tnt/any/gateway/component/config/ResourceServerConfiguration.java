@@ -33,6 +33,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 import org.springframework.security.oauth2.provider.expression.OAuth2WebSecurityExpressionHandler;
 
 /**
+ * 资源服务器
 * @author zww
 * @email  zwwtnt@yeah.net
 * @param  * @param null

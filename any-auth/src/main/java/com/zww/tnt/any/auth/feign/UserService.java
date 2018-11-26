@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /**
- * @author lengleng
- * @date 2017/10/31
+ * @author zww
+ * @date 2018/10/31
  */
 @FeignClient(name = "any-admin", fallback = UserServiceFallbackImpl.class)
 public interface UserService {

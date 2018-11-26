@@ -43,7 +43,7 @@
 		<jasypt.version>1.18</jasypt.version>
 		<fastjson.version>1.2.44</fastjson.version>
 		<druid.version>1.1.6</druid.version>
-		<mysql-connector-java.version>5.1.45</mysql-connector-java.version>
+		<mysql-connector-java.version>8.0.11</mysql-connector-java.version>
 		<kaptcha.version>2.3.2</kaptcha.version>
 		<swagger.version>2.7.0</swagger.version>
 		<fastdfs.version>0.2.0</fastdfs.version>

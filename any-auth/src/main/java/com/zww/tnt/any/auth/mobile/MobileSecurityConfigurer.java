@@ -41,9 +41,10 @@ public class MobileSecurityConfigurer extends SecurityConfigurerAdapter<DefaultS
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+        // 自定义过滤器
         MobileAuthenticationFilter mobileAuthenticationFilter = new MobileAuthenticationFilter();
         mobileAuthenticationFilter.setAuthenticationManager(http.getSharedObject(AuthenticationManager.class));
-        mobileAuthenticationFilter.setAuthenticationSuccessHandler(mobileLoginSuccessHandler);
+        mobileAuthenticationFilter.setAuthenticationSuccessHandler(mobileLoginSuccessHandler);// 登陆成功返回处理器
 
         MobileAuthenticationProvider mobileAuthenticationProvider = new MobileAuthenticationProvider();
         mobileAuthenticationProvider.setUserService(userService);

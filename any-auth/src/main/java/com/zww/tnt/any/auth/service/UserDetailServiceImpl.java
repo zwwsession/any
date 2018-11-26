@@ -35,6 +35,12 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Autowired
     private UserService userService;
 
+    /**
+     * 实现springsecurity 实现类获取用户信息
+     * @param username
+     * @return
+     * @throws UsernameNotFoundException
+     */
     @Override
     public UserDetailsImpl loadUserByUsername(String username) throws UsernameNotFoundException {
         UserVO userVo = userService.findUserByUsername(username);
